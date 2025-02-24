@@ -1,0 +1,73 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["plugin:import/errors", "prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["dist/*", "**/*config.js", "**/*config.mjs"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      },
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": true,
+        "endOfLine": "auto",
+        "tabWidth": 4,
+        "trailingComma": "all"
+      }
+    ],
+    "no-useless-call": "error",
+    "eqeqeq": "error",
+    "no-restricted-syntax": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 128,
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "import/newline-after-import": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "newline-before-return": "error",
+    "newline-after-var": ["error", "always"],
+    "import/no-duplicates": [
+      "error",
+      {
+        "considerQueryString": true
+      }
+    ],
+    "import/named": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "builtin", "index", "sibling", "parent", "internal"],
+        "newlines-between": "always"
+      }
+    ],
+    "no-console": "warn",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "no-alert": "error",
+    "import/no-unresolved": 2
+  }
+}
