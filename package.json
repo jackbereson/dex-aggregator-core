@@ -1,10 +1,10 @@
 {
-  "name": "blockify-cex.core",
+  "name": "dex-aggergator.core",
   "version": "0.1.0",
-  "description": "blockify-cex core",
+  "description": "dex-aggergator core",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Blockify-CEX/blockify-cex-core"
+    "url": "https://github.com/dex-aggergator-core"
   },
   "author": "Jack Bereson",
   "license": "MIT",
